@@ -90,3 +90,11 @@ scroll-margin-top:60px ;
 #enviar{
     margin-top: 10px;
 }
+.incorrecto{
+    text-align: center;
+position: relative;
+top: -300px;
+}
+.float-right{
+    text-align: end;
+}
