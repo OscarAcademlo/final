@@ -6,6 +6,10 @@ box-sizing: border-box;
 }
 footer{
     background-color: #aaa;
+  width: 100%;
+  position: relative;
+  bottom: -200px;
+
 }
 h1, h2 h3{
     font-family: 'Alfa Slab One', cursive;
@@ -95,6 +99,7 @@ scroll-margin-top:60px ;
 position: relative;
 top: -300px;
 }
-.float-right{
-    text-align: end;
+
+.tabla{
+ align-items: flex-end;
 }
