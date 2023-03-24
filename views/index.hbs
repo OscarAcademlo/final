@@ -17,26 +17,20 @@
 
     <div class="row my-3 col-lg-12 ">
 
-        <div id="menus" class="col-md-4 offset-md-2 scroll_section">
-            <h2>Menus</h2>
-            <ul class="lista-de-comidas">
-                <li> <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/pizza.jpg"
-                            alt="">Pizzas
-                    </a></li>
-                <li> <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img src="./images/empanadas.jpg"
-                            alt="">Empanadas </a></li>
-                <li> <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3"><img
-                            src="./images/hamburguesas con papa.jpg" alt="">Hamburguesas </a></li>
-                <li> <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal4"><img src="./images/sandwiches.jpg"
-                            alt="">Sandwiches </a></li>
+        <div id="novedades" class="col-md-5 offset-md-2 scroll_section">
+            <h2>Novedades</h2> 
+            <ul id="novedades" class="lista-de-novedades">
+                {{#each novedades}}
+             
+             <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#Modal1{{id}}" ><img src="./images/pizza.jpg" alt="">{{titulo}}</a>
 
+                {{/each}}
+             
             </ul>
-            <h3>
-                Nuestro Menu tiene la mejor calidad garantizada por nuestras decádas de experiencia
-            </h3>
+            
 
-            <img class="bis" src="./images/menubis.jpg" alt="">
-        </div><!--cierra menu-->
+        </div><!--cierra novedades-->
         <!-- abre imagen -->
         <div class="imagen">
             <h3>Nuestro Restaurante</h3>
@@ -47,100 +41,40 @@
 
 
 
-    </div> <!--cierra menu y nuestro-->
+    </div> <!--cierra novedades y nuestro-->
 </div>
 
 
 
 
 
-<!-- Inicio Modal -->
-<!-- primer modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">La mas rica Pizza de Bariloche</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5>Hecha con la mejor muzzarella del mercado, deliciosa salsa de tomate y aceitunas de La Rioja</h5>
-                <img src="./images/pizza.jpg" alt="Pizza">
+<!-- Inicio Modal  -->
+                {{#each novedades}}
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
+<div class="modal fade" id="Modal1{{id}}" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ModalLabel">{{titulo}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4>{{subtitulo}}</h4>
+        <p>{{cuerpo}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
 </div>
-<!-- fin de primer modal -->
-<!-- segundo modal -->
-<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Estas empanadas son una masa</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5>Nuestro experto en empanadas "Jorge" es un salteño que nos dice que de Salta vienen las mas ricas
-                    empanadas
-                    de Argentina</h5>
-                <img src="./images/empanadas.jpg" alt="Empanadas">
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- fin de segundo modal -->
-<!-- tercer modal -->
-<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Las Hambuerguesas son Mac VIP y son increibles</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5>Si probas las hamburguesas de nuestro local no volveras a otras, es un camino de ida</h5>
-                <img src="./images/hamburguesas con papa.jpg" alt="Hamburgesas">
+                {{/each}}
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- fin de tercer modal -->
-<!-- cuarto modal -->
-<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Los sandwiches son con pan artesanal de masa madre,
-                    y con
-                    ingrendientes seleccionados</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5>No tenes que esperar nada, pero no resignas calidad, nos esforzamos para darte el mejor servicio
-                </h5>
-                <img src="./images/sandwiches.jpg" alt="Sandwiches">
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- fin de cuarto modal -->
 <!-- fin de modal -->
+
+
 
 
 <!-- inicio de historia -->

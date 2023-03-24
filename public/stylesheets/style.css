@@ -6,8 +6,12 @@ box-sizing: border-box;
 }
 footer{
     background-color: #aaa;
+  width: 100%;
+  position: relative;
+  bottom: -200px;
+
 }
-h1, h2 h3{
+h1, h2, h3{
     font-family: 'Alfa Slab One', cursive;
 }
 .imagen{
@@ -20,15 +24,15 @@ h1, h2 h3{
     width: 320pxpx;
     height: 90px;
 }
-.lista-de-comidas{
+.lista-de-novedades{
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.lista-de-comidas li{
+.lista-de-novedades li{
     margin: 4px 0;
 }
-.lista-de-comidas li a{
+.lista-de-novedades li a{
     background-color: #fff;
     font-family: 'alfa slab one',cursive;
     text-decoration: none;
@@ -37,17 +41,17 @@ h1, h2 h3{
     transition: all .2s  ease-in-out;
     display: block;
 }
-.lista-de-comidas li a:hover{
+.lista-de-novedades li a:hover{
     color: #212529;
     background-color: #dadada;
 }
-.lista-de-comidas li a img{
+.lista-de-novedades li a img{
     width: 160px;
     height: 70px;
     transition: all .2s  ease-in-out;
     margin-right: 1rem;
 }
-.lista-de-comidas li a:hover img{
+.lista-de-novedades li a:hover img{
     filter: none;
     margin-right: 1.4rem;
     opacity: 1;
@@ -95,6 +99,7 @@ scroll-margin-top:60px ;
 position: relative;
 top: -300px;
 }
-.float-right{
-    text-align: end;
+
+.tabla{
+ align-items: flex-end;
 }
